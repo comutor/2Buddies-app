@@ -7,17 +7,23 @@ import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 import Search from "@/pages/Search";
 import Account from "@/pages/Account";
+import Auth from "@/pages/Auth";
 
 function Router() {
   return (
-    <Layout>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/search" component={Search} />
-        <Route path="/account" component={Account} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <Switch>
+      <Route path="/auth" component={Auth} />
+      <Route path="*">
+        <Layout>
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/search" component={Search} />
+            <Route path="/account" component={Account} />
+            <Route component={NotFound} />
+          </Switch>
+        </Layout>
+      </Route>
+    </Switch>
   );
 }
 
