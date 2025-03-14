@@ -7,6 +7,7 @@ import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
 import Discover from "@/pages/Discover";
 import Rides from "@/pages/Rides";
+import CreateRide from "@/pages/CreateRide";
 import Account from "@/pages/Account";
 import Auth from "@/pages/Auth";
 
@@ -20,6 +21,7 @@ function Router() {
             <Route path="/" component={Home} />
             <Route path="/discover" component={Discover} />
             <Route path="/rides" component={Rides} />
+            <Route path="/rides/create" component={CreateRide} />
             <Route path="/account" component={Account} />
             <Route component={NotFound} />
           </Switch>
