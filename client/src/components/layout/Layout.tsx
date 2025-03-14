@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Header from "./Header";
 import BottomNav from "./BottomNav";
+import QuickHelp from "./QuickHelp";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface LayoutProps {
@@ -16,6 +17,7 @@ export default function Layout({ children }: LayoutProps) {
       <main className="container mx-auto px-4 pb-20 pt-4">
         {children}
       </main>
+      <QuickHelp />
       {isMobile && <BottomNav />}
     </div>
   );
