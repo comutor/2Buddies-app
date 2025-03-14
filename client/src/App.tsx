@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Discover from "@/pages/Discover";
 import Rides from "@/pages/Rides";
 import CreateRide from "@/pages/CreateRide";
+import RequestRide from "@/pages/RequestRide";
 import Account from "@/pages/Account";
 import Auth from "@/pages/Auth";
 
@@ -22,6 +23,7 @@ function Router() {
             <Route path="/discover" component={Discover} />
             <Route path="/rides" component={Rides} />
             <Route path="/rides/create" component={CreateRide} />
+            <Route path="/rides/request" component={RequestRide} />
             <Route path="/account" component={Account} />
             <Route component={NotFound} />
           </Switch>
