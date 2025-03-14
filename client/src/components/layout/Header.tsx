@@ -6,7 +6,8 @@ export default function Header() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/search", label: "Search" },
+    { href: "/discover", label: "Discover" },
+    { href: "/request-ride", label: "Request Ride" },
     { href: "/account", label: "Account" },
   ];
 

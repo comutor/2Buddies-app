@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Home, Search, User } from "lucide-react";
+import { Home, Search, MapPin, User } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +8,8 @@ export default function BottomNav() {
 
   const tabs = [
     { href: "/", icon: Home, label: "Home" },
-    { href: "/search", icon: Search, label: "Search" },
+    { href: "/discover", icon: Search, label: "Discover" },
+    { href: "/request-ride", icon: MapPin, label: "Request Ride" },
     { href: "/account", icon: User, label: "Account" },
   ];
 
@@ -18,7 +19,7 @@ export default function BottomNav() {
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = location === tab.href;
-          
+
           return (
             <Link
               key={tab.href}

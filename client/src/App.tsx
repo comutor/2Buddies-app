@@ -5,7 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Layout from "@/components/layout/Layout";
 import Home from "@/pages/Home";
-import Search from "@/pages/Search";
+import Discover from "@/pages/Discover";
+import RequestRide from "@/pages/RequestRide";
 import Account from "@/pages/Account";
 import Auth from "@/pages/Auth";
 
@@ -17,7 +18,8 @@ function Router() {
         <Layout>
           <Switch>
             <Route path="/" component={Home} />
-            <Route path="/search" component={Search} />
+            <Route path="/discover" component={Discover} />
+            <Route path="/request-ride" component={RequestRide} />
             <Route path="/account" component={Account} />
             <Route component={NotFound} />
           </Switch>
