@@ -16,6 +16,12 @@ export const users = pgTable("users", {
 
 export const insertUserSchema = createInsertSchema(users)
   .extend({
+    firstName: z.string().min(1, "First name is required"),
+    lastName: z.string().min(1, "Last name is required"),
+    schoolName: z.string().min(1, "School name is required"),
+    phoneNumber: z.string().min(10, "Please enter a valid phone number"),
+    state: z.string().min(2, "State is required"),
+    address: z.string().min(5, "Please enter a valid address"),
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[0-9]/, "Password must contain at least one number")
