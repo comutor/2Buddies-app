@@ -13,8 +13,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import Logo from "@/components/Logo";
 
 type AuthMode = "login" | "signup";
 
@@ -68,10 +69,16 @@ export default function Auth() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">
-        <CardHeader>
+        <CardHeader className="pb-2">
+          <div className="flex justify-center mb-4">
+            <Logo className="text-blue-600 transform scale-150" />
+          </div>
           <CardTitle className="text-2xl text-center">
             {mode === "login" ? "Sign in to your account" : "Create new account"}
           </CardTitle>
+          <CardDescription className="text-center mt-2">
+            Connect with student buddies for shared rides
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <Form {...form}>
