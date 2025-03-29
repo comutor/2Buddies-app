@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
+import Logo from "@/components/Logo";
 
 export default function Header() {
   const [location] = useLocation();
@@ -13,8 +14,10 @@ export default function Header() {
 
   return (
     <header className="border-b">
-      <nav className="container mx-auto px-4 h-16 flex items-center gap-8">
-        <div className="font-bold text-xl">App</div>
+      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <Link href="/">
+          <Logo className="cursor-pointer" />
+        </Link>
         <div className="flex gap-6">
           {links.map((link) => (
             <Link
