@@ -9,8 +9,10 @@ import Discover from "@/pages/Discover";
 import Rides from "@/pages/Rides";
 import CreateRide from "@/pages/CreateRide";
 import RequestRide from "@/pages/RequestRide";
+import RideDetails from "@/pages/RideDetails";
 import Account from "@/pages/Account";
 import Auth from "@/pages/Auth";
+import RideBuddy from "@/components/RideBuddy";
 
 function Router() {
   return (
@@ -24,9 +26,13 @@ function Router() {
             <Route path="/rides" component={Rides} />
             <Route path="/rides/create" component={CreateRide} />
             <Route path="/rides/request" component={RequestRide} />
+            <Route path="/rides/:id">
+              {params => <RideDetails params={params} />}
+            </Route>
             <Route path="/account" component={Account} />
             <Route component={NotFound} />
           </Switch>
+          <RideBuddy />
         </Layout>
       </Route>
     </Switch>
